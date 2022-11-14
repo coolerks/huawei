@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3768878 */
+  src: url('iconfont.woff2?t=1668394102778') format('woff2'),
+       url('iconfont.woff?t=1668394102778') format('woff'),
+       url('iconfont.ttf?t=1668394102778') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gengduo:before {
+  content: "\e600";
+}
+
+.icon-VRglasses:before {
+  content: "\e613";
+}
+
+.icon-dianshi:before {
+  content: "\e67d";
+}
+
+.icon-shoubiao:before {
+  content: "\e614";
+}
+
+.icon-pingban:before {
+  content: "\e605";
+}
+
+.icon-luyouqi:before {
+  content: "\ec62";
+}
+
+.icon-android:before {
+  content: "\e715";
+}
+
+.icon-shouji:before {
+  content: "\e8b9";
+}
+
+.icon-bijibendiannao:before {
+  content: "\e667";
+}
+
+.icon-outline-airpods:before {
+  content: "\e6a5";
+}
+

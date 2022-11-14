@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(151, 151, 151);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        main {
+            width: 1903px;
+            margin: auto;
+        }
+
+        .header-left {
+            width: 200px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-left img {
+            width: 133px;
+            height: 30px;
+        }
+
+        .header-right {
+            width: 1100px;
+            background-color: rgb(173, 173, 173);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-right-link {
+            /* background-color: red; */
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* position: relative; */
+        }
+
+        .header-right-link a {
+            /* flex: auto; */
+            /* background-color: pink; */
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .header-right-link a:hover:before {
+            content: "";
+            background-color: #c7000b;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 43px;
+        }
+
+        .head-right-search {
+            background-color: rgb(109, 228, 162);
+            width: 200px;
+            display: flex;
+        }
+
+        .header-right-link-menu {
+            width: 100%;
+            background: rgb(94, 94, 94);
+            position: absolute;
+            height: 400px;
+            top: 70px;
+            left: 0;
+        }
+
+        .header-right-link-menu-item>span:first-child {
+            font-size: 60px;
+            /* font-weight: 100; */
+        }
+
+        .header-right-link-menu-item {
+            display: flex;
+            flex-direction: column;
+            width: 120px;
+            height: 100px;
+            /* background-color: #fff; */
+            /* outline: 1px solid black; */
+            justify-items: center;
+            align-items: center;
+        }
+
+        .header-right-link-menu-items-left {
+            width: 600px;
+            height: 400px;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: row;;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        .header-right-link-menu-items-right {
+
+        }
+        .header-right-link-menu-items {
+            display: flex;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/iconfont.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img src="./img/huawei_logo.png" alt="">
+        </div>
+        <div class="header-right">
+            <div class="header-right-link">
+                <a href="#">个人及家庭产品</a>
+                <div class="header-right-link-menu">
+                    <div class="header-right-link-menu-items">
+                        <div class="header-right-link-menu-items-left">
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe605;</span>
+                                <span>手机</span>
+                            </span>
+
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe67d;</span>
+                                <span>电脑</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe605;</span>
+                                <span>平板</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe67d;</span>
+                                <span>电视</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe613;</span>
+                                <span>VR</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe614;</span>
+                                <span>手表</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe6a5;</span>
+                                <span>耳机</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+
+                                <span class="iconfont">&#xec62;</span>
+                                <span>路由器</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe715;</span>
+                                <span>系统</span>
+                            </span>
+                            <span class="header-right-link-menu-item">
+                                <span class="iconfont">&#xe600;</span>
+                                <span>更多</span>
+                            </span>
+                        </div>
+                        <div class="header-right-link-menu-items-right">
+                            <img src="./img/mate50-pro.jpg" alt="">
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <a href="#">商用产品及方案</a>
+                <a href="#">服务支持</a>
+                <a href="#">合作伙伴与开发者</a>
+                <a href="#">关于华为</a>
+            </div>
+            <div class="head-right-search">
+                搜索
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
