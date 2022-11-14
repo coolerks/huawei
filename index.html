@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(151, 151, 151);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        main {
+            width: 1903px;
+            margin: auto;
+        }
+
+        .header-left {
+            width: 200px;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-left img {
+            width: 133px;
+            height: 30px;
+        }
+
+        .header-right {
+            width: 1100px;
+            background-color: rgb(173, 173, 173);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-right-link {
+            /* background-color: red; */
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* position: relative; */
+        }
+
+        .header-right-link a {
+            /* flex: auto; */
+            /* background-color: pink; */
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+
+        .header-right-link a:hover:before {
+            content: "";
+            background-color: #c7000b;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 42px;
+        }
+
+        .head-right-search {
+            background-color: rgb(109, 228, 162);
+            width: 200px;
+            display: flex;
+        }
+
+        .header-right-link-menu {
+            width: 100%;
+            background: rgb(94, 94, 94);
+            position: absolute;
+            height: 400px;
+            top: 70px;
+            left: 0;
+        }
+    </style>
 </head>
+
 <body>
-<h1>hello world</h1>
+    <header>
+        <div class="header-left">
+            <img src="./img/huawei_logo.png" alt="">
+        </div>
+        <div class="header-right">
+            <div class="header-right-link">
+                <a href="#">个人及家庭产品</a>
+                <div class="header-right-link-menu">
+                    <div class="header-right-link-menu-items">
+                        
+                    </div>
+                </div>
+                <a href="#">商用产品及方案</a>
+                <a href="#">服务支持</a>
+                <a href="#">合作伙伴与开发者</a>
+                <a href="#">关于华为</a>
+            </div>
+            <div class="head-right-search">
+                搜索
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>
