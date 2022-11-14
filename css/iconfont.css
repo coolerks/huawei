@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3768878 */
-  src: url('iconfont.woff2?t=1668394102778') format('woff2'),
-       url('iconfont.woff?t=1668394102778') format('woff'),
-       url('iconfont.ttf?t=1668394102778') format('truetype');
+  src: url('iconfont.woff2?t=1668411315286') format('woff2'),
+       url('iconfont.woff?t=1668411315286') format('woff'),
+       url('iconfont.ttf?t=1668411315286') format('truetype');
 }
 
 .iconfont {
@@ -14,7 +14,15 @@
 }
 
 .icon-gengduo:before {
-  content: "\e600";
+  content: "\e626";
+}
+
+.icon-gouwuche:before {
+  content: "\e63f";
+}
+
+.icon-sousuo:before {
+  content: "\e651";
 }
 
 .icon-VRglasses:before {
