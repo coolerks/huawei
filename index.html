@@ -204,12 +204,88 @@
         .head-right-search > div > span + span {
             margin-left: 10px;
         }
+        .mask {
+            position: fixed;
+            z-index: 9998;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            display: table;
+            transition: opacity .3s ease;
+        }
+        .search {
+            width: 800px;
+            height: 80px;
+            background-color: white;
+            margin: auto;
+            position: relative;
+            top: 100px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            /*background-color: transparent;*/
+        }
+        .search-content[type=text] {
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            flex-grow: 1;
+            font-size: 30px;
+            background-color: #ffffffaa;
+        }
+        .search-button {
+            text-decoration: none;
+            color: black;
+            /*flex-grow: 1;*/
+            font-size: 40px !important;
+            width: 65px;
+            height: 65px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-right: 10px;
+            transition: background-color 0.5s;
+        }
+        .search-button:hover {
+            background-color: #f5f5f6;
+        }
+       .search-button:active {
+            background-color: #bebebe;
+        }
+
+        .slide-fade-enter-active {
+            transition: all .5s;
+        }
+        .slide-fade-leave-active {
+            transition: all .5s;
+        }
+        .slide-fade-leave-to {;
+            opacity: 0;
+        }
+        .slide-fade-enter {
+            opacity: 0;
+            transition: all 2s;
+        }
+
     </style>
     <link rel="stylesheet" href="./css/iconfont.css">
 </head>
 
 <body>
 <div id="app">
+    <transition name="slide-fade">
+        <div class="mask" v-show="search" @click="search = !search">
+            <div class="search" @click.stop="">
+                <input type="text" class="search-content">
+                <a class="iconfont search-button" href="#">&#xe651;</a>
+            </div>
+        </div>
+    </transition>
     <header>
         <div class="header-left">
             <img src="./img/huawei_logo.png" alt="">
@@ -280,7 +356,7 @@
                     <span class="iconfont">&#xe63f;</span>
                     <span>进入商城</span>
                 </div>
-                <div>
+                <div @click="search = true">
                     <span class="iconfont">&#xe651;</span>
                 </div>
             </div>
@@ -288,24 +364,13 @@
     </header>
 </div>
 <script>
-    // const { createApp } = Vue
-    // createApp({
-    //     el: "#app",
-    //     data: {
-    //         count: 1
-    //     },
-    //     methods: {
-    //         add() {
-    //             alert("6666")
-    //         }
-    //     }
-    // }).mount("#app");
     const {createApp} = Vue
 
     createApp({
         data() {
             return {
-                message: 'Hello Vue!'
+                message: 'Hello Vue!',
+                search: false
             }
         },
         methods: {
