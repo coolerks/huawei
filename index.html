@@ -204,6 +204,7 @@
         .head-right-search > div > span + span {
             margin-left: 10px;
         }
+
         .mask {
             position: fixed;
             z-index: 9998;
@@ -215,6 +216,7 @@
             display: table;
             transition: opacity .3s ease;
         }
+
         .search {
             width: 800px;
             height: 80px;
@@ -227,6 +229,7 @@
             align-items: center;
             /*background-color: transparent;*/
         }
+
         .search-content[type=text] {
             border: none;
             outline: none;
@@ -237,6 +240,7 @@
             font-size: 30px;
             background-color: #ffffffaa;
         }
+
         .search-button {
             text-decoration: none;
             color: black;
@@ -251,26 +255,49 @@
             margin-right: 10px;
             transition: background-color 0.5s;
         }
+
         .search-button:hover {
             background-color: #f5f5f6;
         }
-       .search-button:active {
+
+        .search-button:active {
             background-color: #bebebe;
         }
 
         .slide-fade-enter-active {
             transition: all .5s;
         }
+
         .slide-fade-leave-active {
             transition: all .5s;
         }
+
         .slide-fade-leave-to {;
             opacity: 0;
         }
+
         .slide-fade-enter {
             opacity: 0;
             transition: all 2s;
         }
+
+        content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .carousel-chart {
+            width: 100%;
+        }
+
+        .carousel-chart img {
+            width: 100%;
+
+        }
+
+
+
 
     </style>
     <link rel="stylesheet" href="./css/iconfont.css">
@@ -281,7 +308,7 @@
     <transition name="slide-fade">
         <div class="mask" v-show="search" @click="search = !search">
             <div class="search" @click.stop="">
-                <input type="text" class="search-content">
+                <input type="text" class="search-content" v-model="searchContent" placeholder="搜索">
                 <a class="iconfont search-button" href="#">&#xe651;</a>
             </div>
         </div>
@@ -356,12 +383,18 @@
                     <span class="iconfont">&#xe63f;</span>
                     <span>进入商城</span>
                 </div>
-                <div @click="search = true">
+                <div @click="search = true, searchContent = ''">
                     <span class="iconfont">&#xe651;</span>
                 </div>
             </div>
         </div>
     </header>
+    <content>
+        <div class="carousel-chart">
+            <img v-show="flag" src="img/hc-shenzhen.jpg" alt="">
+            <img v-show="!flag" src="img/hwcloud_1111_v2.jpg" alt="">
+        </div>
+    </content>
 </div>
 <script>
     const {createApp} = Vue
@@ -370,10 +403,17 @@
         data() {
             return {
                 message: 'Hello Vue!',
-                search: false
+                search: false,
+                searchContent: "",
+                arr: ['img/'],
+                flag: true
             }
         },
-        methods: {
+        methods: {},
+        created() {
+            setInterval(() => {
+                this.flag = !this.flag
+            }, 3000)
         }
     }).mount('#app')
 </script>
