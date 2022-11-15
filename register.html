@@ -1,0 +1,100 @@
+<!--
+ * @Created by : SongXiaoxu
+ * @Copyright © 2021年 by: 宋晓旭. All rights reserved
+ * @Date: 2022-09-03 15:19:14
+ * @LastEditTime: 2022-09-13 12:46:00
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/login-register.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <style>
+        .group {
+            margin: 5px auto;
+        }
+        .content {
+            height: 400px;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            const password1 = document.getElementById("password");
+            const password2 = document.getElementById("repeat-password");
+            const submit = document.getElementById("submit");
+            const back = document.getElementById("back");
+            submit.onclick = () => {
+                if (password1.value !== password2.value) {
+                    showDialog("两次密码不一致。")
+                    return false;
+                } else {
+                    return true;
+                }
+                showDialog("8888");
+                return false;
+            }
+
+            back.onclick = () => {
+                this.history.back();
+            }
+
+            const showDialog = (message) => {
+                const mask = document.getElementById("dialog");
+                const msg = mask.getElementsByClassName("dialog-message")[0];
+                const ok = mask.getElementsByClassName("dialog-ok")[0];
+                const dialog = mask.getElementsByClassName("dialog")[0];
+                dialog.classList.add("dialog-in");
+                mask.style.visibility = "visible";
+                msg.innerHTML = message;
+                ok.style.visibility = "visible";
+                ok.onclick = () => {
+                    dialog.classList.add("dialog-out");
+                    ok.style.visibility = "hidden";
+                    setTimeout(() => {
+                        mask.style.visibility = "hidden";
+                        dialog.classList.remove("dialog-out");
+                        dialog.classList.remove("dialog-in");
+                    }, 500)
+                }
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<div class="mask" id="dialog">
+    <div class="dialog">
+        <h2>提示</h2>
+        <p class="dialog-message">message</p>
+        <div class="dialog-button">
+            <button type="normal" class="dialog-ok">确定</button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="back iconfont" id="back">
+        &#xe697;
+    </div>
+    <a class="right iconfont" href="./login.html">&#xe6bd;</a>
+    <h1>注册</h1>
+    <form action="#" method="get">
+        <input type="text" placeholder="账号" name="username">
+        <br>
+        <input type="password" placeholder="密码" id="password" name="password">
+        <input type="password" placeholder="再输一次密码" id="repeat-password">
+        <button id="submit" type="submit">提交</button>
+        <button type="reset">重置</button>
+    </form>
+</div>
+</body>
+
+</html>
+
+</html>

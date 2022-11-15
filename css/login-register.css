@@ -1,0 +1,197 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 350px;
+    height: 350px;
+    box-shadow: 1px 1px 10px #00000022;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+}
+input[type=text], input[type=password] {
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 3px;
+    padding-left: 8px;
+    transition: all 1s;
+}
+input[type=text]:hover, input[type=password]:hover,
+input[type=text]:focus, input[type=password]:focus {
+    border: 1px solid #41a9ff;
+    box-shadow: 1px 1px 5px #41a9ff88;
+}
+input[type=checkbox] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+}
+input[type=checkbox] + label {
+    vertical-align: 2px;
+    font-size: 13px;
+}
+
+button {
+    height: 30px;
+    width: 260px;
+    margin-top: 10px;
+    background-color: #1990ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.5s;
+    /*margin-bottom: 10px;*/
+
+}
+.group {
+    margin-top: 5px;
+}
+button:hover {
+    background-color: #41a9ff;
+}
+button:active {
+    background-color: #0a6ed9;
+    animation: jump 0.5s;
+
+}
+
+button[type=normal] {
+    height: 30px;
+    width: 60px;
+    margin-top: 10px;
+    background-color: #1990ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.5s;
+    /*margin-bottom: 10px;*/
+
+}
+button[type=normal]:hover {
+    background-color: #41a9ff;
+}
+button[type=normal]:active {
+    background-color: #0a6ed9;
+    animation: jump 0.5s;
+
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+    visibility: hidden;
+}
+
+.dialog {
+    width: 480px;
+    height: 180px;
+    background-color: #ffffffdd;
+    margin: auto;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+.dialog-in {
+    animation-name: dialog-in;
+    animation-duration: 0.5s;
+}
+.dialog-out {
+    animation-name: dialog-out;
+    animation-duration: 0.5s;
+}
+.dialog-button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@keyframes dialog-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes dialog-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.back, .right {
+    width: 40px;
+    height: 40px;
+    /*background-color: red;*/
+    border-radius: 8px;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    line-height: 40px;
+    display: block;
+    transition: all 0.5s;
+}
+.right a {
+    text-decoration: none;
+    color: black;
+}
+.right {
+    top: 10px;
+    right: 10px;
+}
+.back {
+    top: 10px;
+    left: 10px;
+}
+.right:hover, .back:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.right:active, .back:active {
+    background-color: #c9c8c8;
+    text-decoration: none;
+}
+
+

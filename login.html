@@ -1,0 +1,80 @@
+<!--
+ * @Created by : SongXiaoxu
+ * @Copyright © 2021年 by: 宋晓旭. All rights reserved
+ * @Date: 2022-09-03 15:19:14
+ * @LastEditTime: 2022-09-13 12:46:00
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <script>
+        window.onload = () => {
+            const remember = document.getElementById("remember");
+            const username = document.getElementById("username");
+            const password = document.getElementById("password");
+            const back = document.getElementById("back");
+            const login = document.getElementById("login");
+            let checked = this.localStorage.checked === "true";
+            remember.checked = checked;
+            if (checked) {
+                username.value = this.localStorage.username === undefined ? "" : this.localStorage.username;
+                password.value = this.localStorage.password === undefined ? "" : this.localStorage.password;
+            }
+
+            login.onclick = () => {
+                if (remember.checked) {
+                    this.localStorage.username = username.value;
+                    this.localStorage.password = password.value;
+                } else {
+                    this.localStorage.removeItem("username");
+                    this.localStorage.removeItem("password");
+                }
+                this.localStorage.checked = remember.checked;
+                return true;
+            }
+            back.onclick = () => {
+                this.history.back();
+            }
+        }
+
+    </script>
+    <link rel="stylesheet" href="./css/login-register.css">
+    <style>
+        #remember-text::before {
+            content: "记住密码"
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="content">
+    <div class="back iconfont" id="back">
+        &#xe697;
+    </div>
+    <a class="right iconfont" href="./register.html">&#xe71c;</a>
+    <h1>登录</h1>
+    <form action="#" method="get">
+        <input type="text" placeholder="账号" id="username" name="username">
+        <br>
+        <input id="password" placeholder="密码" type="password" name="password">
+        <div class="group">
+            <input type="checkbox" id="remember" name="remember"><label for="remember" id="remember-text"/>
+
+        </div>
+        <button id="login">登录</button>
+        <button type="reset">重置</button>
+    </form>
+</div>
+</body>
+
+</html>
+
+</html>
