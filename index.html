@@ -25,6 +25,10 @@
             border-bottom: 1px solid rgba(128, 128, 128, 0.38);
         }
 
+        li {
+            list-style: none;
+        }
+
         main {
             width: 1903px;
             margin: auto;
@@ -95,7 +99,6 @@
             /*background: rgb(94, 94, 94);*/
             position: absolute;
             height: 400px;
-            top: 70px;
             left: 0;
             box-shadow: 0 5px 10px -4px #00000044;
             display: flex;
@@ -103,7 +106,7 @@
             /*visibility: hidden;*/
             top: -600px;
             transition: top 0.5s;
-            z-index: 0;
+            z-index: 4;
 
         }
 
@@ -111,6 +114,7 @@
             /*background-color: red;*/
             /*visibility: inherit;*/
             top: 70px;
+            background-color: white;
         }
 
         .header-right-link-menu-item > span:first-child {
@@ -285,6 +289,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .carousel-chart {
@@ -296,8 +301,152 @@
 
         }
 
+        .carousel-chart {
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-chart:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+            position: absolute;
+            top: 0;
+            z-index: 3;
+        }
+
+        .recommend {
+            display: flex;
+            width: 80%;
+            height: 1426px;
+            /*background-color: #dedede;*/
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .recommend > p:first-child {
+            position: relative;
+            font-size: 25px;
+            /*margin-top: 40px;*/
+            /*margin-bottom: 40px;*/
+        }
+
+        .recommend > p:first-child:before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 6px;
+            background-color: #c7000b;
+            top: 40px;
+            left: 20px;
+        }
+
+        .recommend-container {
+            display: flex;
+            width: 100%;
+            height: 1300px;
+            /*background-color: rgba(141, 141, 141, 0.76);*/
+            flex-direction: column;
+        }
+
+        .recommend-container > div:nth-child(n) {
+            /*background-color: #a1a8ef;*/
+            margin-bottom: 35px;
+            display: flex;
+            flex: auto;
+            width: 100%;
+        }
 
 
+        .recommend-container > div:nth-child(1) > div:first-child {
+            height: 100%;
+            background-color: red;
+            flex-grow: 2;
+            margin-right: 20px;
+        }
+
+        .recommend-container > div:nth-child(1) > div {
+            height: 100%;
+            background-color: red;
+            flex-grow: 1;
+        }
+
+        .recommend-item {
+            background-image: url("./img/mate50-pro-2.jpg");
+            background-size: cover;
+
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .recommend-container > div:nth-child(2) > div {
+            height: 100%;
+            /*background-color: red;*/
+            flex-grow: 1;
+        }
+
+        .recommend-container > div:nth-child(2) > div:last-child {
+            margin-left: 20px;
+            flex-grow: 2;
+        }
+
+        .recommend-container > div:nth-child(3) > div {
+            height: 100%;
+            /*background-color: red;*/
+            flex-grow: 1;
+        }
+
+        .recommend-container > div:nth-child(3) > div:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        .recommend-container > div:nth-child(1) > div:nth-child(2) {
+            background-image: url("./img/p50-pocket-s-p.jpg");
+        }
+
+        .recommend-container > div:nth-child(2) > div:nth-child(1) {
+            background-image: url("./img/matebook_e_go.jpg");
+        }
+
+        .recommend-container > div:nth-child(2) > div:nth-child(2) {
+            background-image: url("./img/matebook-x-pro2.jpg");
+        }
+
+        .recommend-container > div:nth-child(3) > div:nth-child(1) {
+            background-image: url("./img/55g-era-whitepaper-2.jpg");
+        }
+
+        .recommend-container > div:nth-child(3) > div:nth-child(2) {
+            background-image: url("./img/6g.jpg");
+        }
+
+        .recommend-container > div:nth-child(3) > div:nth-child(3) {
+            background-image: url("./img/hc-partners-2.jpg");
+        }
+
+        .recommend-item {
+            background-size: cover;
+            position: relative;
+        }
+
+
+        .recommend-item:hover {
+            background-size: 130%;
+        }
+
+        .recommend-item:hover:before {
+            content: "这是产品的介绍...";
+            color: white;
+            text-indent: 30px;
+            line-height: 60px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
 
     </style>
     <link rel="stylesheet" href="./css/iconfont.css">
@@ -393,6 +542,24 @@
         <div class="carousel-chart">
             <img v-show="flag" src="img/hc-shenzhen.jpg" alt="">
             <img v-show="!flag" src="img/hwcloud_1111_v2.jpg" alt="">
+        </div>
+        <div class="recommend">
+            <p>推荐信息</p>
+            <div class="recommend-container">
+                <div>
+                    <div class="recommend-item"></div>
+                    <div class="recommend-item"></div>
+                </div>
+                <div>
+                    <div class="recommend-item"></div>
+                    <div class="recommend-item"></div>
+                </div>
+                <div>
+                    <div class="recommend-item"></div>
+                    <div class="recommend-item"></div>
+                    <div class="recommend-item"></div>
+                </div>
+            </div>
         </div>
     </content>
 </div>
