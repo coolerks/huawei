@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3768878 */
-  src: url('iconfont.woff2?t=1668501804110') format('woff2'),
-       url('iconfont.woff?t=1668501804110') format('woff'),
-       url('iconfont.ttf?t=1668501804110') format('truetype');
+  src: url('iconfont.woff2?t=1668503561613') format('woff2'),
+       url('iconfont.woff?t=1668503561613') format('woff'),
+       url('iconfont.ttf?t=1668503561613') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,46 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-android1:before {
+  content: "\e62a";
+}
+
+.icon-luyouqi-:before {
+  content: "\e612";
+}
+
+.icon-diannao:before {
+  content: "\e638";
+}
+
+.icon-Android:before {
+  content: "\e9a9";
+}
+
+.icon-VRD:before {
+  content: "\e6ac";
+}
+
+.icon-24gl-headphones:before {
+  content: "\ea09";
+}
+
+.icon-shouji1:before {
+  content: "\e853";
+}
+
+.icon-gengduo1:before {
+  content: "\e621";
+}
+
+.icon-flat:before {
+  content: "\e92a";
+}
+
+.icon-TVdianshi:before {
+  content: "\e7ab";
 }
 
 .icon-zhuce:before {
