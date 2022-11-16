@@ -32,7 +32,6 @@
         main {
             width: 1903px;
             margin: auto;
-
         }
 
         .header-left {
@@ -587,6 +586,30 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+        .fix {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            position: fixed;
+            right: 20px;
+            bottom: 60px;
+            display: block;
+            box-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
+            border-radius: 10px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            transition: all 0.5s;
+        }
+        .fix:hover {
+            color: #c7000b;
+            background-color: #dadada;
+        }
+        .fix:active {
+            background-color: #b4b4b4;
+        }
+
 
 
     </style>
@@ -603,7 +626,7 @@
             </div>
         </div>
     </transition>
-    <header>
+    <header id="top">
         <div class="header-left">
             <img src="./img/huawei_logo.png" alt="">
         </div>
@@ -778,6 +801,9 @@
     <buttom>
         ©2022 滨州学院
     </buttom>
+    <a href="#top" class="fix iconfont">
+        &#xe66c;
+    </a>
 </div>
 <script>
     const {createApp} = Vue
