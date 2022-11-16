@@ -326,6 +326,7 @@
             align-items: center;
             flex-direction: column;
             justify-content: space-evenly;
+            margin-top: 30px;
         }
 
         .title {
@@ -334,6 +335,7 @@
             /*margin-top: 40px;*/
             /*margin-bottom: 40px;*/
             /*background-color: red;*/
+            margin-bottom: 40px;
         }
 
         .title:before {
@@ -379,7 +381,6 @@
         .recommend-item {
             background-image: url("./img/mate50-pro-2.jpg");
             background-size: cover;
-
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -430,13 +431,17 @@
         }
 
         .recommend-item {
-            background-size: cover;
+            background-size: 180%;
             position: relative;
+            border-radius: 30px;
+            transition: all 0.5s;
+            cursor: pointer;
         }
 
 
         .recommend-item:hover {
-            background-size: 130%;
+            background-size: 200%;
+            box-shadow: 1px 1px 33px rgb(100, 110, 225);
         }
 
         .recommend-item:hover:before {
@@ -448,6 +453,7 @@
             height: 100%;
             position: absolute;
             background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 30px;
         }
 
         .content-introduce {
@@ -455,7 +461,7 @@
         }
 
         .news {
-            height: 800px;
+            height: 900px;
             width: 80%;
             align-items: center;
             /*background-color: rgba(141, 141, 141, 0.34);*/
@@ -527,7 +533,20 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            border-radius: 30px;
+            box-shadow: 1px 1px 13px rgba(0, 0, 0, .3);
+            outline: 1px solid #9a9a9a;
+            transition: all 0.5s;
         }
+
+        .news-item:hover {
+            box-shadow: 1px 1px 33px rgb(100, 110, 225);
+        }
+
+        .news-item::-webkit-scrollbar {
+            display: none;
+        }
+
 
         .news-items > .news-item:not(:last-child) {
             margin-right: 20px;
@@ -539,6 +558,8 @@
             height: 50%;
             background-size: cover;
             border: none;
+            border-radius: 30px;
+            outline: 1px solid #9a9a9a;
         }
 
         .news-items > .news-item:first-child > img {
@@ -565,6 +586,10 @@
             overflow: auto;
         }
 
+        .news-items > .news-item:last-child > div:first-child {
+            margin-top: 30px;
+        }
+
         .news-items > .news-item:last-child p {
             margin: 0 !important;
             text-indent: 0;
@@ -586,6 +611,7 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
+
         .fix {
             width: 50px;
             height: 50px;
@@ -602,14 +628,15 @@
             line-height: 50px;
             transition: all 0.5s;
         }
+
         .fix:hover {
             color: #c7000b;
             background-color: #dadada;
         }
+
         .fix:active {
             background-color: #b4b4b4;
         }
-
 
 
     </style>
