@@ -17,6 +17,7 @@ body {
     bottom: 0;
     margin: auto;
     justify-content: center;
+    background-color: #ffffff88;
 }
 input[type=text], input[type=password] {
     height: 30px;
@@ -27,6 +28,7 @@ input[type=text], input[type=password] {
     border-radius: 3px;
     padding-left: 8px;
     transition: all 1s;
+    background-color: #ffffff88;
 }
 input[type=text]:hover, input[type=password]:hover,
 input[type=text]:focus, input[type=password]:focus {
@@ -193,5 +195,7 @@ button[type=normal]:active {
     background-color: #c9c8c8;
     text-decoration: none;
 }
-
+body {
+    background-image: url("../img/background_login.jpg");
+}
 

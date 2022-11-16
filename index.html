@@ -61,7 +61,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-             position: relative;
+            position: relative;
         }
 
         .header-right-link a {
@@ -470,6 +470,8 @@
             padding-top: 40px;
             height: 300px;
             text-align: center;
+            width: 100%;
+
         }
 
         .news-content p {
@@ -501,13 +503,89 @@
             background-color: #980005;
             color: white;
         }
-        
+
         buttom {
             background-color: #e6e6e6;
             display: block;
             height: 80px;
             line-height: 80px;
             text-align: center;
+        }
+
+        .news-items {
+            height: 500px;
+            width: 100%;
+            /*background-color: #eaeaea;*/
+            display: flex;
+        }
+
+        .news-item {
+            background-color: #f2f2f2;
+            width: 300px;
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-items > .news-item:not(:last-child) {
+            margin-right: 20px;
+        }
+
+
+        .news-item img {
+            width: 100%;
+            height: 50%;
+            background-size: cover;
+            border: none;
+        }
+
+        .news-items > .news-item:first-child > img {
+            background-image: url("./img/hc2022-lsit-cn-7.jpg");
+        }
+
+        .news-items > .news-item:nth-child(2) > img {
+            background-image: url("./img/ubbf-2022-cn3.jpg");
+        }
+
+        .news-item p, .news-item h3 {
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        .read {
+            width: 100px !important;
+            height: 40px !important;
+            line-height: 40px !important;
+            margin: 30px 0 !important;
+        }
+
+        .news-items > .news-item:last-child {
+            overflow: auto;
+        }
+
+        .news-items > .news-item:last-child p {
+            margin: 0 !important;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+        .news-items > .news-item:last-child > div > p:first-child {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .news-items > .news-item:last-child > div > p:last-child {
+            font-size: 15px;
+            color: rgba(141, 141, 141, 0.76);
+        }
+
+        .news-items > .news-item:last-child > div {
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
 
@@ -584,9 +662,9 @@
                                 <span>礼品</span>
                             </span>
                         </div>
-<!--                        <div class="header-right-link-menu-items-right">-->
-<!--                            <img src="./img/mate50-pro.jpg" alt="">-->
-<!--                        </div>-->
+                        <!--                        <div class="header-right-link-menu-items-right">-->
+                        <!--                            <img src="./img/mate50-pro.jpg" alt="">-->
+                        <!--                        </div>-->
 
                     </div>
 
@@ -628,21 +706,72 @@
         </div>
         <img src="./img/t4a-salmon-cn-2.jpg" class="content-introduce" alt="">
         <div class="news">
-            <p class="title" style="margin-top: 20px">新闻活动</p>
+            <p class="title" style="margin-top: 70px">新闻活动</p>
             <div class="news-content">
-                <p>
-                    在智慧电力峰会上，华为电力数字化军团CEO孙福友认为：“数字技术必将对新型电力系统的高质量发展起到‘加速器’和‘变压器’的作用。数字技术解决不了电力系统的原理性问题，但新型电力系统的构建和实现，一定离不开数字技术。”</p>
-                <p>
-                    近年来，数字电网、智慧电厂、数字换流站等数字化应用已在电力系统实现多点布局。华为于2022年3月组建了电力数字化军团，秉承在“联接＋计算＋云”领域的禀赋优势，聚焦全球电力行业数字化转型领域的关键挑战，整合华为大平台的技术和研发优势，携手生态伙伴，提供包括终端、云、ICT基础设施及架构设计等产品、解决方案及服务。通过数字感知、数字孪生及数字增值，助力智慧发电、智慧电网、低碳慧能领域场景数字化，帮助电力企业实现安全、高效、绿色、创新的转型升级。</p>
-                <p>
-                    “2022年，我们开展了直流专业数字化顶层设计迭代，优化应用架构、数据架构与技术架构，加速开展了15座数字换流站推广及总部、省级应用功能建设。在换流站选用华为超融合服务器建成可信可控、架构灵活、安全可靠、性能强大的融合基础设施平台，满足站内数据接入、模型转换、边缘计算、中台交互、视频管理等要求。”国家电网设备部管理部直流处处长王庆说。</p>
-                <p>
-                    为进一步明确电力数字化的背景、目标、场景等内容，大会还同期发布了《电力数字化2030》（以下简称“白皮书”）。白皮书从电力数字化的背景、目标以及技术特征等多个维度，全方位介绍了电力行业在实现绿色发展过程中的数字化应用场景等内容，并明确提出，在“双碳”背景下，新能源占比逐渐提高，电力供给和消费方式发生重大变化，多源电能协同互济、相辅相成，电力数字化将发挥关键价值。</p>
-                <p>
-                    对此，中国工程院院士、中国南方电网公司专家委员会名誉主任委员、华南理工大学电力学院名誉院长李立浧认为，白皮书结合企业自身的技术优势、经验积累和对于电力系统的理解，对电力数字化2030的实现路径做了比较具体的规划，对数字化发展目标进行了量化预测，具有实用性和前瞻性，对能源电力行业发展和跨行业协同合作有很好的参考价值。</p>
-                <p>
-                    白皮书也对未来发出期许：“电力数字化转型让未来的电力系统充满了想象空间。随着电力数字化的不断发展和深入，电力数字孪生的目标愿景将愈发清晰并触手可及。”</p>
-                <a>查看更多</a>
+                <div class="news-items">
+                    <div class="news-item">
+                        <img alt="">
+                        <h3>华为全连接大会</h3>
+                        <p>
+                            华为全联接大会2022之旅中国站在深圳开启，本届大会的主题为“释放数字生产力”。
+                        </p>
+                        <a class="read">阅读</a>
+
+
+                    </div>
+                    <div class="news-item">
+                        <img alt="">
+                        <h3>华为全连接大会</h3>
+                        <p>
+                            第八届全球超宽带高峰论坛 (UBBF 2022) 于10月27-28日在泰国曼谷举办。
+                        </p>
+                        <a class="read">阅读</a>
+
+                    </div>
+                    <div class="news-item">
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                        <div>
+                            <p>华为：点亮未来，释放非洲数字经济潜力</p>
+                            <p>2022年11月14日</p>
+                        </div>
+                    </div>
+                </div>
+                <a>查看更多活动</a>
             </div>
         </div>
     </content>
