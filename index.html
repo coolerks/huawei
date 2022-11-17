@@ -723,7 +723,7 @@
             <div class="head-right-search">
                 <div>
                     <span class="iconfont">&#xe63f;</span>
-                    <span>进入商城</span>
+                    <a style="text-decoration: none;color: black;margin-left: 10px" href="./store.html">进入商城</a>
                 </div>
                 <div @click="search = true, searchContent = ''">
                     <span class="iconfont">&#xe651;</span>
@@ -845,7 +845,8 @@
                 flag: true
             }
         },
-        methods: {},
+        methods: {
+        },
         created() {
             setInterval(() => {
                 this.flag = !this.flag
